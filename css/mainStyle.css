@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300i');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+a:link {
+    font-weight: bold;
+    color: silver;
+    text-decoration: none;
+}
+
+a:visited {
+    color: silver;
+}
+
+a:hover {
+    color: #FF0000;
+    text-decoration: underline overline;
+    text-decoration-color: #FF0000;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+a:active {
+    color: black;
+}
+
+#titleBar {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    background-color: #111;
+    z-index: 1;
+}
+
+#pageTitle {
+    font-family: 'Tangerine', cursive;
+    font-size: 45px;
+    color: silver;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#titleBar ul {
+    float: right;
+}
+
+#titleBar li {
+    list-style: none;
+    float: left;
+    font-size: 24px;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+#mainContainer {
+    position: relative;
+    top: 60px;
+    padding-bottom: 40px;
+}
+
+footer {
+    position: fixed;
+    color: white;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    bottom: 5px;
+    width: 30%;
+
+}

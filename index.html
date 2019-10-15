@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Home
+    </title>
+    <meta charset="utf-8">
+    <meta name="description" content="A try at HTML with CSS and JS">
+    <meta name="keywords" content="HTML,CSS,JS,Coursework">
+    <link rel="stylesheet" type="text/css" href="./css/mainStyle.css">
+    <style type="text/css">
+    body {
+        background: url("./img/home_bg.jpeg");
+    }
+
+    #mainContainer {
+        display: grid;
+        grid-template-columns: 6fr 3fr 7fr;
+    }
+
+    #mainContainer header {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        font: 80px 'Montserrat', 'Raleway';
+    }
+
+    #writable {
+        margin-top:-50px; 
+        grid-column-start: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        font-size: 20px;
+        height: 600px;
+        text-align: center;
+    }
+
+    #writable img {
+        width: 16px;
+        height: 16px;
+    }
+
+    #writable div {
+        margin-top: auto;
+        margin-bottom: auto;
+
+    }
+
+    #writable button {
+        background-color: green;
+        border: none;
+        padding: 10px 20px 10px 20px;
+    }
+
+
+    #d1 {
+        grid-column-start: 1;
+    }
+
+    #d2 {
+        grid-column-start: 3;
+    }
+
+    #d4 {
+        grid-column-start: 2;
+    }
+
+    #d3 {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        font-size: 24px;
+
+    }
+
+    #d3 button {
+        margin: 5px 20px 5px 20px;
+    }
+
+    footer {
+        color: black;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="titleBar">
+        <div id="pageTitle">
+            My personal Website
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" id="opened">Home</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
+                    <li><a href="./pages/blogs.html">Blogs</a></li>
+                    <li><a href="./pages/resume.html">CV</a></li>
+                    <li><a href="./pages/portfolio.html">Portfolio</a></li>
+                    <li><a href="./pages/research.html">Research</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="mainContainer">
+        <header>
+            <center>Dive into My World</center>
+        </header>
+        <div id="writable">
+            <div id="d1">Want to hire me?<br>
+                <center><button><a href="./pages/resume.html">Hire Me</a></button></center>
+            </div>
+            <div id="d2">Want to talk to me?<br>
+                <center><button><a href="https://gmail.com">Email Me <img src="./img/gm_logo.png"></a></button></center>
+            </div>
+            <div id="d3">
+                <center>Or would you like to know more about me?<br>
+                    <button><a href="https://facebook.com">Facebook <img src="./img/fb_logo.png"></a></button><button><a href="https://instagram.com">Instagram<img src="./img/ig_logo.png"></a></button></center>
+            </div>
+            <div id="d4">Wanna know about my creations?<br>
+                <center><button><a href="./pages/portfolio.html">See These</a></button></center>
+            </div>
+        </div>
+    </div>
+    <footer>
+        CopyRight 2019 &copy;. All Rights Reserved to Creators and Editors
+    </footer>
+
+</body>
+
+</html>

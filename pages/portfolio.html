@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        PortFolio
+    </title>
+    <meta charset="utf-8">
+    <meta name="description" content="A try at HTML with CSS and JS">
+    <meta name="keywords" content="HTML,CSS,JS,Coursework">
+    <link rel="stylesheet" type="text/css" href="../css/mainStyle.css">
+    <style type="text/css">
+    body {
+        background-image: url(../img/portfolio_bg.jpeg);
+    }
+
+    #mainContainer {
+        width: 80%;
+        margin: 0 auto 0 auto;
+        height: 800px;
+
+
+    }
+
+
+    #img {
+        height: 420px;
+    }
+
+    #img img {
+        height: 400px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #carousel {
+        background-color: rgba(090, 090, 090, 0.8);
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        font: 18px Oswald, 'Times New Roman', sans-serif;
+    }
+
+    #carousel button {
+        background-color: transparent;
+        width: 100%;
+        height: 600px;
+        padding: all;
+        transition-duration: 0.8s;
+
+    }
+
+    #carousel button:hover {
+        background-color: #aaa;
+    }
+
+    #carousel #accText {
+        height: 100px;
+    }
+
+    #carousel #img {
+        padding: 0;
+        margin: 0;
+    }
+
+    #next,
+    #prev {
+        border: none;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="titleBar">
+        <div id="pageTitle">
+            PortFolio
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                    <li><a href="../pages/blogs.html">Blogs</a></li>
+                    <li><a href="../pages/resume.html">CV</a></li>
+                    <li><a href="../pages/portfolio.html" id="opened">Portfolio</a></li>
+                    <li><a href="../pages/research.html">Research</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="mainContainer">
+        <span style="font-size: 20px;color: #eee">These are some of the things that I have done so far.</span>
+        <div id="mainBody">
+            <table id="carousel">
+                <tr>
+                    <td><button id="prev" class="butt" onclick="prevImg()">&lt;</button></td>
+                    <td>
+                        <div id="img">
+                            <!-- For the Image-->
+                            <figure>
+                                <img id="SlideBox">
+                            </figure>
+                        </div>
+                        <hr>
+                        <hr>
+                        <div id="accText">
+                            <!-- For the Accompaning text-->
+                            <article id="txtId1" style="display: none;">
+                                <!-- Explanatory Text For Img 1-->
+                                This was one of the very first worthwhile project that I had done by myself. The project was to create a program using python that could act as a Library Management System. The entire program was based on Command Line. I had quite a hard time figuring out how to solve the given problem as I had no knowledge of python before this but it was a fun and enlightening experience.
+                            </article>
+                            <article id="txtId2" style="display: none;">
+                                <!-- Explanatory Text For Img 2-->
+                                This was another project that I had done. The objective was to create a database model for any company. The database model was to be created such that it could be used as a reference for creating complex database systems for active organizations. The DataBase Management System used was MySQL and the database used was MariaDB.
+                            </article>
+                            <article id="txtId3" style="display: none;">
+                                <!-- Explanatory Text For Img 3-->
+                                This is a Java Swing based GUI application that allows the user to add and remove developers(object) into the memory. It also allows the user to appoint or terminate the developer as per the user's will. Furthermore it can also display all of the information given stored in the memory.
+                            </article>
+                            <article id="txtId4" style="display: none;">
+                                <!-- Explanatory Text For Img -->
+                                I also like to take photos wherever I go. The shown photo is a photo that I look last afternoon.
+                            </article>
+                        </div>
+                    </td>
+                    <td><button id="next" class="butt" onclick="nxtImg()">&gt;</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        CopyRight 2019 &copy;. All Rights Reserved to Creators and Editors
+    </footer>
+</body>
+<script type="text/javascript" src="../js/PortFolio.js"></script>
+
+</html>
