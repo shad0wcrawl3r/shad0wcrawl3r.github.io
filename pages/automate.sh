@@ -1,7 +1,8 @@
 
 
 #!/bin/bash
-echo "This script is currently only meant to run after my ssh-key has been added to github account or linked"
+echo "This script is currently only meant to run after my personal ssh-key has been added to this system or a new key has been linked to the github account."
+echo "If  the keys have not been added, this script will fail when cloning the repo from github"
 apt update
 apt install -y git apt-transport-https ca-certificates curl gnupg lsb-release
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
