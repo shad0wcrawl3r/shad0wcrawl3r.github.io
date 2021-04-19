@@ -54,11 +54,11 @@ divider
 echo "Clone the github repository to /opt/"
 divider
 cd /opt/
-git clone git@github.com:shad0wcrawl3r/OpenNMSFront.git
+git clone https://github.com/shad0wcrawl3r/Intuition.git
 divider
 echo "Change working directory to the repo source."
 divider
-cd /opt/OpenNMSFront
+cd /opt/Intuition	
 echo "Install base requirements"
 divider
 pip install -r requirements.txt
