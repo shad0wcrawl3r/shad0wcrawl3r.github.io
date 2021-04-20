@@ -24,7 +24,9 @@ apt install -y git apt-transport-https ca-certificates curl gnupg lsb-release
 divider
 echo "Adding the GPG key for docker."
 divider
-curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+#curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+cat /usr/share/keyrings/docker-archive-keyring.gpg > /dev/null || curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
 divider
 echo "Adding the source file for docker"
 divider
