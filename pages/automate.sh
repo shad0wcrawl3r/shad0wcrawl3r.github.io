@@ -10,8 +10,6 @@ echo "If  the keys have not been added, this script will fail when cloning the r
 
 curl ashwinbelbase.com.np/pages/automate.sh > /opt/automate.sh 	#for future updates
 
-echo "@daily 15 cron.daily bash /etc/automate" >> /etc/anacrontab
-
 divider
 echo "Updating the apt repository."
 divider
@@ -20,7 +18,7 @@ apt update
 divider
 echo "Installing  packages required for docker."
 divider
-apt install -y git apt-transport-https ca-certificates curl gnupg lsb-release
+apt install -y git apt-transport-https ca-certificates curl gnupg lsb-release anacron
 divider
 echo "Adding the GPG key for docker."
 divider
@@ -55,6 +53,7 @@ python3 -m pip install pip --upgrade
 divider
 echo "Clone the github repository to /opt/"
 divider
+echo "@daily 15 cron.daily bash /etc/automate" >> /etc/anacrontab
 cd /opt/
 git clone https://github.com/shad0wcrawl3r/Intuition.git
 divider
@@ -69,3 +68,4 @@ divider
 echo "for some reason the code will not entirely work with the default requirements.txt and needs these packages to be installed manually."
 divider
 pip install flask_sqlalchemy flask_bootstrap flask_wtf psutil pythonping ipcalc email-validator docker-compose psycopg2-binary
+
