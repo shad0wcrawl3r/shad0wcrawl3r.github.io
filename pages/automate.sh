@@ -69,3 +69,4 @@ echo "for some reason the code will not entirely work with the default requireme
 divider
 pip install flask_sqlalchemy flask_bootstrap flask_wtf psutil pythonping ipcalc email-validator docker-compose psycopg2-binary
 
+python3 gallery/main.py
