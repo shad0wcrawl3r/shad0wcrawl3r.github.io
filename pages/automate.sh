@@ -67,6 +67,6 @@ pip install -r requirements.txt
 divider
 echo "for some reason the code will not entirely work with the default requirements.txt and needs these packages to be installed manually."
 divider
-pip install flask_sqlalchemy flask_bootstrap flask_wtf psutil pythonping ipcalc email-validator docker-compose psycopg2-binary
+pip install flask_sqlalchemy flask_bootstrap flask_wtf psutil pythonping ipcalc email-validator docker-compose psycopg2-binary xmltodict
 
 python3 gallery/main.py
