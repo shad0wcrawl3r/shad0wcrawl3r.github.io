@@ -1,14 +1,10 @@
-
+#!/bin/bash
 
 divider(){
   echo "-----------------------------------------------------------------------"
 }
 
-#!/bin/bash
-echo "This script is currently only meant to run after my personal ssh-key has been added to this system or a new key has been linked to the github account."
-echo "If  the keys have not been added, this script will fail when cloning the repo from github"
 
-curl ashwinbelbase.com.np/pages/automate.sh > /opt/automate.sh 	#for future updates
 
 divider
 echo "Updating the apt repository."
@@ -18,7 +14,7 @@ apt update
 divider
 echo "Installing  packages required for docker."
 divider
-apt install -y git apt-transport-https ca-certificates curl gnupg lsb-release anacron
+apt install -y git apt-transport-https ca-certificates curl gnupg lsb-release
 divider
 echo "Adding the GPG key for docker."
 divider
@@ -51,22 +47,3 @@ echo "Upgrade Pip"
 divider
 python3 -m pip install pip --upgrade
 divider
-echo "Clone the github repository to /opt/"
-divider
-echo "@daily 15 cron.daily bash /etc/automate" >> /etc/anacrontab
-cd /opt/
-git clone https://github.com/shad0wcrawl3r/Intuition.git
-divider
-echo "Change working directory to the repo source."
-divider
-cd /opt/Intuition	
-echo "Install base requirements"
-divider
-pip install -r requirements.txt
-#for some reason the code will not work with the default requirements.txt
-divider
-echo "for some reason the code will not entirely work with the default requirements.txt and needs these packages to be installed manually."
-divider
-pip install flask_sqlalchemy flask_bootstrap flask_wtf psutil pythonping ipcalc email-validator docker-compose psycopg2-binary xmltodict
-
-python3 gallery/main.py
