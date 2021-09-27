@@ -34,7 +34,7 @@ apt update
 divider
 echo "Installing docker and python"
 divider
-apt install docker-ce docker-ce-cli containerd.io python3-pip python3-dev -y
+apt install docker-ce docker-ce-cli containerd.io python3.9-pip python3.9-dev -y
 
 
 divider
