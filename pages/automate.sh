@@ -38,3 +38,8 @@ apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 echo "alias docker-compose='docker compose'" >> /root/.bashrc
 source /root/.bashrc
 apt install -y tcpdump suricata jq  
+echo "
+To configure your current shell, run:
+source '$HOME/.bashrc'
+"
+
