@@ -36,3 +36,5 @@ echo "Installing docker and python"
 divider
 apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 echo "alias docker-compose='docker compose'" >> /root/.bashrc
+source /root/.bashrc
+apt install -y tcpdump suricata jq  
