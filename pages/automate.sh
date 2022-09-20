@@ -34,16 +34,5 @@ apt update
 divider
 echo "Installing docker and python"
 divider
-apt install docker-ce docker-ce-cli containerd.io python3.9-pip python3.9-dev -y
-
-
-divider
-echo "Create a symbolic link for pip to pip3"
-divider
-ln -s $(whereis pip3 | awk '{print $2}' ) /usr/bin/pip
-
-divider
-echo "Upgrade Pip"
-divider
-python3 -m pip install pip --upgrade
-divider
+apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+echo "alias docker-compose='docker compose'" >> /root/.bashrc
